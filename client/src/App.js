@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Import components
 import NavBar from "./components/navbar/navBar";
 import Footer from "./components/footer/Footer";
+import WhatsAppButton from "./components/whatsapp/whatsappNumber"; 
 
 // Import pages
 import Home from "./pages/home/Home";
@@ -15,13 +16,14 @@ const App = () => {
   return (
     <Router>
       <NavBar />
-      <main>
+      <main style={{ position: "relative", minHeight: "100vh", paddingBottom: "60px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
+        <WhatsAppButton /> 
       </main>
       <Footer />
     </Router>

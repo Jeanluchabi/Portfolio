@@ -17,15 +17,15 @@ const Home = () => {
       <Content style={styles.content}>
         <Row gutter={[32, 32]} justify="center">
           <Col xs={24} md={12}>
-            <Card bordered={false} style={styles.card}>
+            <Card variant="borderless" style={styles.card}>
               <Title level={3}>Hello, I'm Jean Luc!</Title>
-              <Paragraph>
+              <Paragraph style={styles.paragraph}>
                 I am a passionate developer specializing in both modern Mobile and Web applications.
                 Explore my projects, learn more{" "}
                 <Link to="/about" style={styles.inlineLink}>about me</Link>, or{" "}
                 <Link to="/contactus" style={styles.inlineLink}>get in touch</Link>!
               </Paragraph>
-              <Button type="primary" size="large">
+              <Button type="primary" size="large" style={styles.button}>
                 <Link to="/projects">View Projects</Link>
               </Button>
             </Card>
